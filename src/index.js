@@ -48,7 +48,8 @@ client
 
 client.writeData({
   data: {
-    cartHidden: true
+    cartHidden: true,
+    cartItems: []
   }
 });
 
