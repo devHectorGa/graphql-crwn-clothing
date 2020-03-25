@@ -2,10 +2,8 @@ import React from "react";
 import CustomButton from "../custom-button/custom-button.component";
 import "./collection-item.styles.scss";
 
-const CollectionItem = props => {
-  const { item, addItem } = props;
+const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
-  console.log(props);
 
   return (
     <div className="collection-item">
