@@ -10,14 +10,16 @@ const ADD_ITEM_TO_CART = gql`
   }
 `;
 
-const CollectionItemContainer = props => (
+const CollectionItemContainer = (props) => (
   <Mutation mutation={ADD_ITEM_TO_CART}>
-    {addItemToCart => (
-      <CollectionItem
-        addItem={item => addItemToCart({ variables: { item } })}
-        {...props}
-      />
-    )}
+    {(addItemToCart) => {
+      return (
+        <CollectionItem
+          addItem={(item) => addItemToCart({ variables: { item } })}
+          {...props}
+        />
+      );
+    }}
   </Mutation>
 );
 
